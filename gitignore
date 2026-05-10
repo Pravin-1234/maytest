@@ -1,0 +1,18 @@
+# create_gitignore.py
+
+# Define the patterns you want Git to ignore
+ignore_patterns = [
+    "*.log",          # log files
+    "*.tmp",          # temporary files
+    "__pycache__/",   # Python cache directories
+    "*.pyc",          # compiled Python files
+    ".DS_Store",      # macOS system files
+    "venv/",          # virtual environment folder
+]
+
+# Create or overwrite the .gitignore file
+with open(".gitignore", "w") as f:
+    for pattern in ignore_patterns:
+        f.write(pattern + "\n")
+
+print(".gitignore file created successfully!")
